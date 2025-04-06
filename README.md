@@ -42,7 +42,9 @@ Usa o algoritmo de Euclides estendido para encontrar o inverso de a mod b.
 
 ## Questão 8
 
-TODO
+Usa o algoritmo de Euclides estendido para encontrar x tal que
+
+$$ a \cdot x \equiv b \pmod{m} $$
 
 ## Questão 9
 
