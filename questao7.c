@@ -34,28 +34,37 @@ int extended_gcd(int a, int b, int *s, int *t) {
 	return a;
 }
 
+// Retorna -1 se a e m não forem coprimos,
+// pois nesse caso não existe um inverso modular
+int modular_inverse(int a, int m) {
+	int s, t;
+
+	int gcd = extended_gcd(a, m, &s, &t);
+
+	if (gcd != 1) {
+		return -1;
+	}
+
+	return (s + m) % m;
+}
+
 int main() {
 	puts("Insira dois inteiros coprimos: ");
 
 	int a, b;
 	scanf("%d %d", &a, &b);
 
-	int s, t;
-	int mdc = extended_gcd(a, b, &s, &t);
+	int inverse = modular_inverse(a, b);
 
-	printf("MDC(%d, %d) = %d.\n", a, b, mdc);
-
-	if (mdc != 1) {
+	if (inverse < 0) {
 		printf("Os inteiros %d e %d não são coprimos, logo, não há inverso modular.\n", a, b);
 		return 0;
 	}
 
 	putchar('\n');
 
-	s = (b + s) % b;
-
-	printf("%d * %d é congruente a 1 módulo %d\n", s, a, b);
-	printf("Assim, a solução é %d.\n", s);
+	printf("%d * %d é congruente a 1 módulo %d\n", inverse, a, b);
+	printf("Assim, a solução é %d.\n", inverse);
 
 
 	return 0;
