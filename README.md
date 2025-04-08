@@ -48,8 +48,14 @@ $$ a \cdot x \equiv b \pmod{m} $$
 
 ## Questão 9
 
-TODO
+Resolve um sistema de 3 congruências da forma
+
+$$ x \equiv a \pmod{m} $$
 
 ## Questão 10
 
-TODO
+Resolve um sistema de n congruências da forma
+
+$$ x \equiv a \pmod{m} $$
+
+onde n é um inteiro fornecido pelo usuário
