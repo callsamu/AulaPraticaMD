@@ -1,5 +1,13 @@
 # Aula Prática de MD
 
+Equipe:
+
+- Samuel Brederodes
+- Antônio Sérgio da Silva
+- Fábio Tenório
+- Almir Dias
+- Thiago Araújo
+
 ## Compilando e rodando o código
 
 ```
