@@ -101,6 +101,18 @@ int main() {
 	puts("Insira os valores de a e m para as congruências:");
 
 	read_congruences(&c);
+
+	int modulus_gcd = gcd(c.m[0], c.m[1]);
+	for (int i = 2; i < c.size; i++) {
+		modulus_gcd = gcd(modulus_gcd, c.m[i]);
+	}
+
+	if (modulus_gcd != 1) {
+		printf("Os módulos não são todos coprimos\n");
+		return 1;
+	}
+
+
 	int x = solve_congruences(&c);
 
 	putchar('\n');
